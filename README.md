@@ -8,7 +8,7 @@ It provided guest entry management, prasad (food) distribution tracking, photo/d
 ## Live Demo Video  
 
 [▶ Watch Demo Video](./assets/demo_video.mp4)  
-*(Replace with YouTube/Vimeo link or local mp4 in assets folder)*  
+*(Replace with YouTube/Vimeo link or local mp4 in assets folder)*  .
 
 ---
 
