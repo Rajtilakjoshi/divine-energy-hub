@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/divine-energy-hub/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/divine-energy-hub/static/js/main.9928f8f1.chunk.js",
+    "main.js.map": "/divine-energy-hub/static/js/main.9928f8f1.chunk.js.map",
+    "runtime-main.js": "/divine-energy-hub/static/js/runtime-main.5e8d93d2.js",
+    "runtime-main.js.map": "/divine-energy-hub/static/js/runtime-main.5e8d93d2.js.map",
+    "static/js/2.fa8be2d6.chunk.js": "/divine-energy-hub/static/js/2.fa8be2d6.chunk.js",
+    "static/js/2.fa8be2d6.chunk.js.map": "/divine-energy-hub/static/js/2.fa8be2d6.chunk.js.map",
+    "static/js/3.9e04e074.chunk.js": "/divine-energy-hub/static/js/3.9e04e074.chunk.js",
+    "static/js/3.9e04e074.chunk.js.map": "/divine-energy-hub/static/js/3.9e04e074.chunk.js.map",
+    "index.html": "/divine-energy-hub/index.html",
+    "precache-manifest.611915956e4cbbfebdeece779113bd45.js": "/divine-energy-hub/precache-manifest.611915956e4cbbfebdeece779113bd45.js",
+    "service-worker.js": "/divine-energy-hub/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/divine-energy-hub/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.fa8be2d6.chunk.js.LICENSE.txt": "/divine-energy-hub/static/js/2.fa8be2d6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e8d93d2.js",
+    "static/js/2.fa8be2d6.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.9928f8f1.chunk.js"
+  ]
+}
