@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { auth, firestore } from '../firebase'; // Import your Firebase config
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -16,10 +16,9 @@ function Login() {
       const userDoc = await firestore.collection('users').doc(user.uid).get();
       const role = userDoc.data().role;
 
-      // Redirect based on role
-      if (role === 'volunteer') history.push('/volunteer');
-      else if (role === 'gate-admin') history.push('/gate-admin');
-      else if (role === 'main-admin') history.push('/main-admin');
+      if (role === 'volunteer') navigate('/volunteer');
+      else if (role === 'gate-admin') navigate('/gate-admin');
+      else if (role === 'main-admin') navigate('/main-admin');
     } catch (error) {
       console.error('Login failed', error);
     }

@@ -1,11 +1,12 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
-import 'firebase/storage';
+// Import only what you need from Firebase v9+
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
-// Your Firebase configuration object
+// Your Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyC2aXHppr-IO8UmITBOwlVvezQp6CbBfuk",
+  apiKey: "AIzaSyC2aXHppr-IO8UmITBOwlVvezQp6CbBfuk",
   authDomain: "divine-energy-hub.firebaseapp.com",
   projectId: "divine-energy-hub",
   storageBucket: "divine-energy-hub.appspot.com",
@@ -15,11 +16,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+const app = initializeApp(firebaseConfig);
 
-const auth = firebase.auth();
-const firestore = firebase.firestore();
-const storage = firebase.storage();
+// Export services
+const auth = getAuth(app);
+const firestore = getFirestore(app);
+const storage = getStorage(app);
+
 export { auth, firestore, storage };
