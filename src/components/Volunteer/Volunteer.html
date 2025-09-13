@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard</title>
+    <link rel="stylesheet" href="volunteer.css">
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyC2aXHppr-IO8UmITBOwlVvezQp6CbBfuk",
+          authDomain: "divine-energy-hub.firebaseapp.com",
+          databaseURL: "https://divine-energy-hub-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "divine-energy-hub",
+          storageBucket: "divine-energy-hub.appspot.com",
+          messagingSenderId: "147821831701",
+          appId: "1:147821831701:web:55728fe02acdc5d9f5101c",
+          measurementId: "G-N71553V4QG"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        window.db = db; // Expose Firestore to global scope for use in the JS file
+    </script>
+</head>
+<body>
+    <div id="scanner-container">
+        <!-- Video element to show the camera feed -->
+        <video id="scanner" autoplay playsinline></video>
+    </div>
+    
+    <div id="message" class="hidden">
+        <!-- Status message and buttons -->
+        <span id="status-message"></span>
+        <button id="view-details" class="hidden">View Details</button>
+        <button id="manual-entry">Manual Entry</button>
+    </div>
+
+    <script src="volunteer.js" type="module"></script>
+</body>
+</html>
